@@ -1,0 +1,11 @@
+<%- include('_head', { title: 'Settings' }) %>
+<div class="max-w-md bg-white rounded-lg shadow p-6">
+  <h1 class="text-xl font-semibold mb-4">Settings</h1>
+  <form method="post" action="/settings" class="space-y-3">
+    <label class="block text-sm">Default low stock threshold
+      <input name="default_low_stock" type="number" min="0" step="1" required value="<%= user.default_low_stock %>" class="mt-1 w-full border rounded px-3 py-2"></label>
+    <p class="text-xs text-slate-500">Used for products that don't have their own threshold.</p>
+    <button class="bg-indigo-600 text-white rounded px-4 py-2 hover:bg-indigo-700">Save</button>
+  </form>
+</div>
+<%- include('_foot') %>
