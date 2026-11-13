@@ -2,7 +2,7 @@
 
 A minimal multi-tenant SaaS inventory app (6-hour MVP). Each organization only ever sees its own data.
 
-**Live demo:** _add your deployed URL here_
+**Live demo:** https://stockflow-mvp-ff1v.onrender.com
 
 ## Features
 - Sign up (email, password, confirm password, organization name) / log in / log out
