@@ -1,0 +1,13 @@
+<%- include('_head', { title: 'Sign up' }) %>
+<div class="max-w-sm mx-auto bg-white rounded-lg shadow p-6 mt-10">
+  <h1 class="text-xl font-semibold mb-4">Create your StockFlow account</h1>
+  <form method="post" action="/signup" class="space-y-3">
+    <label class="block text-sm">Organization name<input name="org" required value="<%= v.org || '' %>" placeholder="My Test Store" class="mt-1 w-full border rounded px-3 py-2"></label>
+    <label class="block text-sm">Email<input type="email" name="email" required value="<%= v.email || '' %>" class="mt-1 w-full border rounded px-3 py-2"></label>
+    <label class="block text-sm">Password (min 8 chars)<input type="password" name="password" required minlength="8" class="mt-1 w-full border rounded px-3 py-2"></label>
+    <label class="block text-sm">Confirm password<input type="password" name="confirm" required class="mt-1 w-full border rounded px-3 py-2"></label>
+    <button class="w-full bg-indigo-600 text-white rounded py-2 hover:bg-indigo-700">Sign up</button>
+  </form>
+  <p class="text-sm text-slate-500 mt-4">Already registered? <a href="/login" class="text-indigo-600">Log in</a></p>
+</div>
+<%- include('_foot') %>
